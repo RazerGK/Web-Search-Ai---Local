@@ -425,7 +425,6 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
             ("Wikipedia", self.search_wikipedia),
             ("DuckDuckGo", self.search_duckduckgo),
             ("Mozilla Developer", self.search_mozilla),
-            ("GitHub", self.search_github),
             ("Stack Overflow", self.search_stackoverflow),
             ("Brave Search", self.search_brave),
         ]
@@ -449,7 +448,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
 print(f"Server startet auf Port {PORT}")
 print(f"Offne http://localhost:{PORT}")
-print("Durchsucht Wikipedia, DuckDuckGo, Mozilla, GitHub, Stack Overflow und Brave Search")
+print("Durchsucht Wikipedia, DuckDuckGo, Mozilla, Stack Overflow und Brave Search")
 
 with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
     httpd.serve_forever()
