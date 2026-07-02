@@ -448,7 +448,7 @@ class MyHandler(http.server.BaseHTTPRequestHandler):
 
 print(f"Server startet auf Port {PORT}")
 print(f"Offne http://localhost:{PORT}")
-print("Durchsucht Wikipedia, DuckDuckGo, Mozilla, Stack Overflow und Brave Search")
+print("Durchsucht DuckDuckGo, Mozilla, Stack Overflow und Brave Search")
 
 with socketserver.TCPServer(("", PORT), MyHandler) as httpd:
     httpd.serve_forever()
